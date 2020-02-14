@@ -27,6 +27,6 @@ def postsignIn(request):
 
     user = auth.sign_in_with_email_and_password(email, passw)
 
-    return render(request, "welcome.html" , {"e": email})
+    return render(request, "welcome.html" , {"em": email})
 
 
