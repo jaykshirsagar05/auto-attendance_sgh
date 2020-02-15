@@ -38,4 +38,3 @@ if __name__ == "__main__":
     photo_click()
     time.sleep(3)
     photo_click()
-#jay 11
