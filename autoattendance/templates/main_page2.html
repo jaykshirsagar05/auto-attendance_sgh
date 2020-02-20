@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.general
+{
+
+  color: white;
+  
+  margin-left: 30px;
+}
+.sidenav a:hover {
+  background-color: #ddd;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 20px;
+  margin-left: 55px;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 30px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+</style>
+</head>
+<body bgcolor="#add8e6">
+
+<div class="topnav">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"> &nbsp &nbsp &#128073;&#127995; </span>
+<!-- <img src="3linepic.png" cursor:pointer" onclick="openNav()"> -->
+  <div class="topnav-right">
+    <a class="active" href="#home">Home</a>
+  
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+    <a href="#search">Search</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <h3 class="general"> AUTO ATTENDENCE</h3>
+  <hr>
+  <hr>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<br>
+
+<div style="padding-left:300px">
+    <h1>Dashboard</h1> 
+    <canvas id="c1" width="200px" height="60px" style="border:ridge; "></canvas>
+     <img id="scream" width="60px" height="60px" style="display: none">
+    <script type="text/javascript">
+      var stu=document.getElementById('c1');
+      var ctx_stu=stu.getContext('2d');
+      var img_stu = new Image();
+      img_stu.src='Student.jpeg';
+      ctx_stu.beginPath();
+      img_stu.onload = function() {
+      ctx_stu.drawImage(img_stu,0,0,60,60);
+      }
+      ctx_stu.font = "15px Arial";
+      ctx_stu.fillText("STUDENTS", 65, 20);
+      ctx_stu.font = "10px Arial bold";
+      ctx_stu.fillText("20", 65, 35);
+      ctx_stu.closePath();
+    </script>
+
+    <canvas id="c2" width="200px" height="60px" style="border:groove; "></canvas>
+        <img id="scream2" width="60px" height="60px" style="display: none">
+    <script type="text/javascript">
+      var teac=document.getElementById('c2');
+      var ctx_teac=teac.getContext('2d');
+      var img_teac =new Image();
+      img_teac.src='Teacher.jpeg';
+      ctx_teac.beginPath();
+      img_teac.onload = function() {
+      ctx_teac.drawImage(img_teac,0,0,60,60);
+      }
+      ctx_teac.font = "15px Arial";
+      ctx_teac.fillText("TEACHER", 65, 20);
+      ctx_teac.font = "10px Arial bold";
+      ctx_teac.fillText("1", 65, 35);
+      ctx_teac.closePath();
+    </script>
+
+    <canvas id="c3" width="200px" height="60px" style="border:groove; "></canvas>
+        <img id="scream3" width="60px" height="60px" style="display: none">
+    <script type="text/javascript">
+      var par=document.getElementById('c3');
+      var ctx_par=par.getContext('2d');
+      //ctx_par.fillStyle="white";
+      //ctx_par.fillRect(0,0,c3.width,c3.height);
+      var img_par =new Image();
+      img_par.src='Parent.jpeg';
+      ctx_par.beginPath();
+      img_par.onload = function() {
+      ctx_par.drawImage(img_par,0,0,60,60);
+      }
+      ctx_par.font = "15px Arial";
+      ctx_par.fillText("PARENTS", 65, 20);
+      ctx_par.font = "10px Arial bold";
+      ctx_par.fillText("7", 65, 35);
+      ctx_par.closePath();
+    </script>
+
+    <canvas id="c4" width="200px" height="60px" style="border: groove; "></canvas>
+        <img id="scream4" width="60px" height="60px" style="display: none">
+    <script type="text/javascript">
+      var cla=document.getElementById('c4');
+      var ctx_cla=cla.getContext('2d');
+      var img_cla =new Image();
+      img_cla.src='Class.jpeg';
+      ctx_cla.beginPath();
+      img_cla.onload = function() {
+      ctx_cla.drawImage(img_cla,0,0,60,60);
+      }
+      ctx_cla.font = "15px Arial";
+      ctx_cla.fillText("Class", 65, 20);
+      ctx_cla.font = "10px Arial bold";
+      ctx_cla.fillText("2", 65, 35);
+      ctx_cla.closePath();
+    </script>
+
+    <br><canvas id="c5" width="1000px" height="50px" style="border: groove; "></canvas>
+        <img id="scream4" width="60px" height="60px" style="display: none">
+    <script type="text/javascript">
+      var r1=document.getElementById('c5');
+      var ctx_r1=r1.getContext('2d');
+      //ctx.fillRect(100,100,30,300)
+      //var img_cla =new Image();
+      //img_cla.src='Class.jpeg';
+      //ctx_cla.beginPath();
+      //img_cla.onload = function() {
+      //ctx_cla.drawImage(img_cla,0,0,60,60);
+      //}
+      //ctx_cla.font = "15px Arial";
+      //ctx_cla.fillText("Class", 65, 20);
+      //ctx_cla.font = "10px Arial bold";
+      //ctx_cla.fillText("2", 65, 35);
+      //ctx_cla.closePath();
+
+
+      
+    </script>
+
+</div>
+
+</body>
+</html>
