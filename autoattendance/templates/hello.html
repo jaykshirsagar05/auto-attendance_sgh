@@ -9,9 +9,11 @@
 
 <form action="/postsign/" method="post">
     {% csrf_token %}
-    Email: <input type="email" name="email">
-    password: <input type="password" name="password">
+    Email: <input type="email" name="email" ">
+    password: <input type="password" name="password" pattern="[A-za-z]{3}>
     <input type="submit" value="signIn">
+    <button type="submit">Submit</button>
+
 </form>
 </body>
 </html>
