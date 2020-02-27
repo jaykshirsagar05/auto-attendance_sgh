@@ -27,7 +27,7 @@ def photo_click():
     bucket = storage.bucket()
     imageBlob = bucket.blob(file_name)
     # upload to cloud
-    imageBlob.upload_from_filename(filename=os.getcwd() + '\\' + file_name + '.jpg')
+    imageBlob.upload_from_filename(filename=os.getcwd() + '\\' + file_name + ".jpg")
     print(file_name)
     # delete file from PI
     try:
